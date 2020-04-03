@@ -1,0 +1,29 @@
+@import "../../styles/global.module";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.Layout {
+  display: flex;
+}
+
+.Content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 20px;
+}
+
+.Main {
+  margin-top: 55px;
+}
+
+@media (min-width: 720px) {
+  .SidebarContainer {
+    width: 240px;
+    flex-shrink: 0;
+  }
+}

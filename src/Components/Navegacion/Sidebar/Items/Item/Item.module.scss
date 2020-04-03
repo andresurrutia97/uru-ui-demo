@@ -1,0 +1,45 @@
+@import "../../../../../styles/global.module";
+
+.Item {
+  box-sizing: border-box;
+  width: 100%;
+  a {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    text-decoration: none;
+    color: map-get($colors, blackMain);
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: map-get($colors, grayCLighter);
+      .hoverFlag {
+        background-color: map-get($colors, grayC);
+      }
+    }
+
+    &:active,
+    &.active {
+      background-color: map-get($colors, grayCLighter);
+      .hoverFlag {
+        background-color: map-get($colors, mainGreen);
+      }
+    }
+  }
+}
+
+.hoverFlag {
+  height: 42px;
+  width: 5px;
+}
+
+.icon {
+  display: flex;
+  margin: 0 20px;
+}
+
+@media (min-width: 720px) {
+
+}

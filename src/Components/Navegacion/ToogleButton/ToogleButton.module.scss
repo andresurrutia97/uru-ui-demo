@@ -1,0 +1,15 @@
+@import "../../../styles/global.module";
+
+.ToogleButton {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  vertical-align: middle;
+  color: white;
+}
+
+@media (min-width: 720px) {
+  .ToogleButton {
+    display: none;
+  }
+}
