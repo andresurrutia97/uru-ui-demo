@@ -4,7 +4,6 @@ import Backdrop from "../../UI/Backdrop/Backdrop";
 import uruUiLogo from "../../../Assets/img/uru-ui-logo.png";
 
 import Items from "./Items/Items";
-import Routes from "../../../Routes";
 
 const Sidebar = (props) => {
   let attachedClasses = [styles.Sidebar, styles.Close];
@@ -27,12 +26,7 @@ const Sidebar = (props) => {
               height: "1px",
             }}
           />
-          <Items routes={Routes} close={props.closed} />
-        </div>
-        <div style={{ width: "100%" }}>
-          {/* <div className={styles.LogoAuto}>
-            <img src={uaoLogo} alt="Universidad Autónoma de Occidentes"></img>
-          </div> */}
+          <Items close={props.closed} />
         </div>
       </div>
     </React.Fragment>

@@ -3,6 +3,7 @@
 .Item {
   box-sizing: border-box;
   width: 100%;
+
   a {
     display: flex;
     flex-flow: row;
@@ -14,32 +15,32 @@
     box-sizing: border-box;
 
     &:hover {
-      background-color: map-get($colors, grayCLighter);
-      .hoverFlag {
-        background-color: map-get($colors, grayC);
-      }
+      color: map-get($colors, pinkMain);
     }
 
     &:active,
     &.active {
-      background-color: map-get($colors, grayCLighter);
+      background-color: map-get($colors, pinkLight);
+      color: map-get($colors, pinkMain);
       .hoverFlag {
-        background-color: map-get($colors, mainGreen);
+        background-color: map-get($colors, pinkMain);
       }
     }
   }
 }
 
-.hoverFlag {
-  height: 42px;
-  width: 5px;
+.Item_text {
+  padding-left: 22px;
 }
 
-.icon {
-  display: flex;
-  margin: 0 20px;
+.level {
+  padding-left: 38px;
+}
+
+.hoverFlag {
+  height: 40px;
+  width: 3px;
 }
 
 @media (min-width: 720px) {
-
 }
