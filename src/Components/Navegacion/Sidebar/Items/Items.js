@@ -23,9 +23,9 @@ const Items = (props) => {
       <div className={styles.ComponentsList_title} onClick={openHandler}>
         Componentes
         {open ? (
-          <span class="material-icons">expand_less</span>
+          <span className="material-icons">expand_less</span>
         ) : (
-          <span class="material-icons">expand_more</span>
+          <span className="material-icons">expand_more</span>
         )}
       </div>
       <div className={classComponents.join(" ")}>

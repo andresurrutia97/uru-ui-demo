@@ -22,6 +22,7 @@
     &.active {
       background-color: map-get($colors, pinkLight);
       color: map-get($colors, pinkMain);
+      font-weight: 600;
       .hoverFlag {
         background-color: map-get($colors, pinkMain);
       }

@@ -3,8 +3,7 @@ import styles from "./Toolbar.module.scss";
 import ToogleButton from "../ToogleButton/ToogleButton";
 import { withRouter } from "react-router-dom";
 
-const Toolbar = props => {
-
+const Toolbar = (props) => {
   return (
     <div className={styles.Container}>
       <div className={styles.Toolbar}>
