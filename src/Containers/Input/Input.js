@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-export class Input extends Component {
+export class InputComponent extends Component {
   render() {
-    return <div>Input</div>;
+    return <div>InputComponent</div>;
   }
 }
 
-export default Input;
+export default InputComponent;
