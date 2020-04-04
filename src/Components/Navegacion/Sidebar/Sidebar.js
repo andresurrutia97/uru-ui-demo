@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Sidebar.module.scss";
 import Backdrop from "../../UI/Backdrop/Backdrop";
-import uruUiLogo from "../../../Assets/img/uru-ui-logo.png";
+import uruUiLogo from "../../../Assets/img/logoWeb.png";
 
 import Items from "./Items/Items";
 

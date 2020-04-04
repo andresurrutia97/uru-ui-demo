@@ -35,7 +35,6 @@ export class Layout extends Component {
 
         <div className={styles.Content}>
           <div className={styles.Main}>{this.props.children}</div>
-          {/* <div className={styles.Footer}>Footer</div> */}
         </div>
       </div>
     );

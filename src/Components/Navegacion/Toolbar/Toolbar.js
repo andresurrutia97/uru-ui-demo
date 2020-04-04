@@ -11,7 +11,6 @@ const Toolbar = props => {
         <div className={styles.icono}>
           <ToogleButton clicked={props.open} />
         </div>
-
       </div>
     </div>
   );
