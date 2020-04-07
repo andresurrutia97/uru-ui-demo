@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { createStore, compose, combineReducers } from "redux";
+import { createStore, compose } from "redux";
 
 import reducer from "./store/reducer";
 import "./index.css";
@@ -12,10 +12,6 @@ import * as serviceWorker from "./serviceWorker";
 //Redux developer tools Chrome extension
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-//Combinación de todos los reducers
-// const rootreducer = combineReducers({});
-
-//Creacion de la store con el middleware(thunk) para utilizar action creators(redex asíncrono)
 const store = createStore(reducer, composeEnhancers());
 
 const app = (

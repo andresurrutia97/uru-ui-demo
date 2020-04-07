@@ -9,7 +9,7 @@ function App() {
     <Layout>
       <Switch>
         <Route path="/" exact component={() => <Redirect to="/home" />} />
-        <Route path="/home" component={() => <Redirect to="/home" />} />
+        <Route path={home.path} component={home.component} />
         {components.map((rt, index) => {
           return <Route key={index} path={rt.path} component={rt.component} />;
         })}

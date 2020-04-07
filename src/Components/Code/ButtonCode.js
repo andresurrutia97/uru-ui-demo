@@ -167,7 +167,7 @@ export const CustomTheme = () => {
             <span className={globalStyles.attr_name}>   backgroundColor: </span>
             <span className={globalStyles.attr_value}>"#ff59ff"</span>,
             {"\n"}
-            <span className={globalStyles.attr_value}>   "hover:"</span>
+            <span className={globalStyles.attr_value}>   ":hover"</span>
             <span className={globalStyles.attr_name}>: </span>
             <span className={globalStyles.attr_name}>{"{"} </span>
             {"\n"}

@@ -77,7 +77,7 @@ p {
   }
 
   .attr_name {
-    color: #5cd3ff;
+    color: #80ddff;
   }
 
   .attr_value {
@@ -94,5 +94,15 @@ p {
 }
 
 .ComponentExample {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.SelectContainer {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.SelecetUl {
+  list-style: none;
 }

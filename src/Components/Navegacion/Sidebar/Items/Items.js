@@ -2,7 +2,6 @@ import React from "react";
 import Item from "./Item/Item";
 import styles from "./Items.module.scss";
 import { home, components } from "../../../../Routes";
-import TreeView from "../../../UI/TreeView/TreeView";
 
 const Items = (props) => {
   const [open, setOpen] = React.useState(false);

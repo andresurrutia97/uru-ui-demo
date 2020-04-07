@@ -53,6 +53,23 @@ export class ButtonComponent extends Component {
           </Button>
         </div>
 
+        <div className={globalStyles.ComponentExample}>
+          <Button
+            onClick={this.props.onChangeVariant}
+            color="primary"
+            variant={variant}
+          >
+            {text}
+          </Button>
+          <div className={globalStyles.SelectContainer}>
+            <div className={globalStyles.SelectContainer}>
+              <div style={{ fontWeight: "600", height: "250px" }}>
+                Opciones seleccionadas
+            </div>
+            </div>
+          </div>
+        </div>
+
         <h2>Botones contenidos</h2>
         <p>
           Los Botones contenidos son de alto énfasis, distinguidos por el uso de
@@ -112,7 +129,7 @@ export class ButtonComponent extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    isOutlined: state.changeVariant
+    isOutlined: state.changeVariant,
   };
 };
 

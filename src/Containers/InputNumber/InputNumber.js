@@ -1,38 +1,41 @@
 import React, { Component, Fragment } from "react";
 import { InputNumber, ThemeProvider } from "uru-ui";
+import { connect } from "react-redux";
 
+import * as actions from "../../store/actionTypes";
 import globalStyles from "../../styles/_global.module.scss";
 import Title from "../../Components/UI/Title/Title";
-import {
-  ContainedCode,
-  OutlinedCode,
-  CustomTheme,
-} from "../../Components/Code/ButtonCode";
+import { InputNumberCode, CustomTheme } from "../../Components/Code/InputNumberCode";
 
 export class InputNumberNumberComponent extends Component {
-
   render() {
     const theme = {
-      width: "300px",
-      height: "60px",
-      padding: "8px",
-      fontSize: "45px",
-      margin: "5px",
-      border: "dotted 3px",
       borderColor: "blue",
-      borderRadius: "none",
+      borderRadius: "30px",
       ":hover": {
-        borderColor: "orange",
+        borderColor: "red",
       },
     };
     return (
       <Fragment>
         <Title
-          title="InputNumber (campo numerico)"
+          title="InputNumber (campo numérico)"
           desc={
-            "El campo numerico permite a los usuarios ingresar números y formatearlos."
+            "El campo numérico permite a los usuarios ingresar números y recibirlo formateado."
           }
         />
+        <div className={globalStyles.ComponentExample}>
+          <InputNumber
+            color={this.props.characterNumber >= 6 ? "success" : "danger"}
+            placeholder="Escribe 6 caracteres"
+            variant="outlined"
+            onChange={(e) => this.props.onGetNumber(e.target.value)}
+            value={this.props.inputNumber}
+          />
+          <div style={{ fontSize: "14px" }}>
+            <b>Escribiste:</b> {this.props.inputNumber}
+          </div>
+        </div>
         <div>
           <h2>InputNumbers</h2>
           <p>
@@ -49,14 +52,14 @@ export class InputNumberNumberComponent extends Component {
             <InputNumber color="danger" placeholder="Input Number" />
           </div>
           <div className={globalStyles.code}>
-            <ContainedCode />
+            <InputNumberCode />
           </div>
         </div>
         <div>
           <h2>Estilos personalizados</h2>
           <p>
             También puedes agregar estilos personalizados a los
-            inputNumInputNumbers. He aquí un ejemplo.
+            inputNumber. He aquí un ejemplo.
           </p>
           <div className={globalStyles.elementContainer}>
             <ThemeProvider theme={theme}>
@@ -75,4 +78,20 @@ export class InputNumberNumberComponent extends Component {
   }
 }
 
-export default InputNumberNumberComponent;
+const mapStateToProps = (state) => {
+  return {
+    inputNumber: state.inputNumber,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onGetNumber: (number) =>
+      dispatch({ type: actions.INPUT_NUMBER, value: number }),
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(InputNumberNumberComponent);

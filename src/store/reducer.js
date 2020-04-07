@@ -9,6 +9,20 @@ const initialState = {
   //Input
   inputText: "",
   characterNumber: 0,
+  //InputNumber
+  inputNumber: "",
+  //Select
+  optionsSelect: [
+    { label: "Perro" },
+    { label: "gato" },
+    { label: "leon" },
+    { label: "culebra" },
+    { label: "pez" },
+    { label: "tigre" },
+    { label: "aguila" },
+  ],
+  selectedOptions: [],
+  //Autocomplete
 };
 
 //siderbar
@@ -33,6 +47,16 @@ const getCharacterNumber = (state, action) => {
   return updateObject(state, { inputText: action.value, characterNumber });
 };
 
+//InputNumebr
+const inputNumber = (state, action) => {
+  return updateObject(state, { inputNumber: action.value });
+};
+
+//Selected
+const selectedOptions = (state, action) => {
+  return updateObject(state, { selectedOptions: action.options });
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     //sidebar
@@ -49,6 +73,17 @@ const reducer = (state = initialState, action) => {
     //Input
     case actionTypes.GET_CHARACTERS_NUMBER:
       return getCharacterNumber(state, action);
+
+    //InputNumber
+    case actionTypes.INPUT_NUMBER:
+      return inputNumber(state, action);
+
+    //Selected
+    case actionTypes.INPUT_NUMBER:
+      return inputNumber(state, action);
+
+    case actionTypes.GET_SELECTED_OPTIONS:
+      return selectedOptions(state, action);
 
     default:
       return state;

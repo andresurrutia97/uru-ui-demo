@@ -4,10 +4,9 @@ import { Autocomplete, ThemeProvider } from "uru-ui";
 import globalStyles from "../../styles/_global.module.scss";
 import Title from "../../Components/UI/Title/Title";
 import {
-  ContainedCode,
-  OutlinedCode,
+  AutocompleteCode,
   CustomTheme,
-} from "../../Components/Code/ButtonCode";
+} from "../../Components/Code/AutocompleteCode";
 
 export class AutocompleteComponent extends Component {
   options = [
@@ -24,9 +23,7 @@ export class AutocompleteComponent extends Component {
     const theme = {
       root: { width: "300px" },
       input: {
-        padding: "8px",
-        fontSize: "14px",
-        borderStyle: " dotted dashed double solid",
+        borderStyle: " dotted",
         borderWidth: " 3px",
         borderRadius: "none",
         ":hover": {
@@ -42,21 +39,34 @@ export class AutocompleteComponent extends Component {
             "El autocompletado es una caja de texto normal mejorada por un panel de opciones sugeridas."
           }
         />
+
+        <div className={globalStyles.ComponentExample}>
+          <Autocomplete
+            placeholder="Autocomplete..."
+            variant="filled"
+            options={this.options}
+          />
+          <div className={globalStyles.SelectContainer}>
+            <div style={{ fontWeight: "600", height: "250px" }}>
+              Opciones seleccionadas
+            </div>
+          </div>
+        </div>
         <div>
-          <h2>InputNumbers</h2>
+          <h2>Combo box</h2>
           <p>
-            El componente InputNumber soporta los estilos filled, outlined y
-            default
+            El valor debe elegirse de un conjunto predefinido de valores
+            permitidos.
           </p>
           <div className={globalStyles.elementContainer}>
             <Autocomplete
-              placeholder="Input Number"
+              placeholder="Autocomplete..."
               variant="filled"
               options={this.options}
             />
           </div>
           <div className={globalStyles.code}>
-            <ContainedCode />
+            <AutocompleteCode />
           </div>
         </div>
         <div>
@@ -69,7 +79,7 @@ export class AutocompleteComponent extends Component {
             <ThemeProvider theme={theme}>
               <Autocomplete
                 variant="outlined"
-                placeholder="custom InputNumber"
+                placeholder="Custom Autocomplete"
                 options={this.options}
               />
             </ThemeProvider>
