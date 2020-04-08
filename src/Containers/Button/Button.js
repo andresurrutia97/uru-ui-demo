@@ -53,24 +53,7 @@ export class ButtonComponent extends Component {
           </Button>
         </div>
 
-        <div className={globalStyles.ComponentExample}>
-          <Button
-            onClick={this.props.onChangeVariant}
-            color="primary"
-            variant={variant}
-          >
-            {text}
-          </Button>
-          <div className={globalStyles.SelectContainer}>
-            <div className={globalStyles.SelectContainer}>
-              <div style={{ fontWeight: "600", height: "250px" }}>
-                Opciones seleccionadas
-            </div>
-            </div>
-          </div>
-        </div>
-
-        <h2>Botones contenidos</h2>
+        <h3>Botones contenidos</h3>
         <p>
           Los Botones contenidos son de alto énfasis, distinguidos por el uso de
           elevación y relleno. Contienen acciones que son primarias para la
@@ -86,7 +69,7 @@ export class ButtonComponent extends Component {
           <ContainedCode />
         </div>
 
-        <h2>Botones Outlined</h2>
+        <h3>Botones Outlined</h3>
         <p>
           Botones con contorno (outlined) son de énfasis medio. Contienen
           acciones que son importantes, pero no primarias en la app. Los botones
@@ -109,7 +92,7 @@ export class ButtonComponent extends Component {
           <OutlinedCode />
         </div>
 
-        <h2>Estilos personalizados</h2>
+        <h3>Estilos personalizados</h3>
         <p>
           También puedes agregar estilos personalizados a los botones. He aquí
           un ejemplo.

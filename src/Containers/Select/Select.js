@@ -62,7 +62,7 @@ export class SelectComponent extends Component {
         </div>
 
         <div>
-          <h2>Select - Selección única</h2>
+          <h3>Select - Selección única</h3>
           <p>
             En el componente Select se puede obtener las opciones seleccionadas
             a traves de la propiedad "onChange". Al pasarla se retornará un
@@ -76,7 +76,7 @@ export class SelectComponent extends Component {
           </div>
         </div>
         <div>
-          <h2>Select - Selección multiple</h2>
+          <h3>Select - Selección multiple</h3>
           <p>
             El componente select soporta seleccion multiple. Se activa con la
             propiedad "multi".
@@ -89,7 +89,7 @@ export class SelectComponent extends Component {
           </div>
         </div>
         <div>
-          <h2>Estilos personalizados</h2>
+          <h3>Estilos personalizados</h3>
           <p>
             También puedes agregar estilos personalizados a los
             inputNumInputNumbers. He aquí un ejemplo.

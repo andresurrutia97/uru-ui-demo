@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import { Autocomplete, ThemeProvider } from "uru-ui";
+import { connect } from "react-redux";
 
+import * as actions from "../../store/actionTypes";
 import globalStyles from "../../styles/_global.module.scss";
 import Title from "../../Components/UI/Title/Title";
 import {
@@ -40,20 +42,20 @@ export class AutocompleteComponent extends Component {
           }
         />
 
-        <div className={globalStyles.ComponentExample}>
+        <div className={globalStyles.ComponentExampleColumn}>
           <Autocomplete
             placeholder="Autocomplete..."
             variant="filled"
-            options={this.options}
+            options={this.props.options}
+            onChange={this.props.onGetSelectedOption}
           />
-          <div className={globalStyles.SelectContainer}>
-            <div style={{ fontWeight: "600", height: "250px" }}>
-              Opciones seleccionadas
-            </div>
+
+          <div style={{ fontSize: "14px", marginTop: "8px" }}>
+            <b>Seleccionaste:</b> {this.props.selectedOption[0]}
           </div>
         </div>
         <div>
-          <h2>Combo box</h2>
+          <h3>Combo box</h3>
           <p>
             El valor debe elegirse de un conjunto predefinido de valores
             permitidos.
@@ -62,7 +64,7 @@ export class AutocompleteComponent extends Component {
             <Autocomplete
               placeholder="Autocomplete..."
               variant="filled"
-              options={this.options}
+              options={this.props.options}
             />
           </div>
           <div className={globalStyles.code}>
@@ -70,7 +72,7 @@ export class AutocompleteComponent extends Component {
           </div>
         </div>
         <div>
-          <h2>Estilos personalizados</h2>
+          <h3>Estilos personalizados</h3>
           <p>
             También puedes agregar estilos personalizados a los
             inputNumInputNumbers. He aquí un ejemplo.
@@ -80,7 +82,7 @@ export class AutocompleteComponent extends Component {
               <Autocomplete
                 variant="outlined"
                 placeholder="Custom Autocomplete"
-                options={this.options}
+                options={this.props.options}
               />
             </ThemeProvider>
           </div>
@@ -93,4 +95,24 @@ export class AutocompleteComponent extends Component {
   }
 }
 
-export default AutocompleteComponent;
+const mapStateToProps = (state) => {
+  return {
+    options: state.optionsAutocomplete,
+    selectedOption: state.optionSelected,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onGetSelectedOption: (selectedOption) =>
+      dispatch({
+        type: actions.GET_OPTION,
+        optionSelected: selectedOption,
+      }),
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AutocompleteComponent);

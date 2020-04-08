@@ -5,7 +5,10 @@ import { connect } from "react-redux";
 import * as actions from "../../store/actionTypes";
 import globalStyles from "../../styles/_global.module.scss";
 import Title from "../../Components/UI/Title/Title";
-import { InputNumberCode, CustomTheme } from "../../Components/Code/InputNumberCode";
+import {
+  InputNumberCode,
+  CustomTheme,
+} from "../../Components/Code/InputNumberCode";
 
 export class InputNumberNumberComponent extends Component {
   render() {
@@ -24,20 +27,24 @@ export class InputNumberNumberComponent extends Component {
             "El campo numérico permite a los usuarios ingresar números y recibirlo formateado."
           }
         />
-        <div className={globalStyles.ComponentExample}>
+        <div className={globalStyles.ComponentExampleColumn}>
+          <p>
+            En el componente InputNumber se puede obtener el número formateado a
+            traves de la propiedad "onChange".
+          </p>
           <InputNumber
             color={this.props.characterNumber >= 6 ? "success" : "danger"}
             placeholder="Escribe 6 caracteres"
             variant="outlined"
-            onChange={(e) => this.props.onGetNumber(e.target.value)}
+            onChange={this.props.onGetNumber}
             value={this.props.inputNumber}
           />
           <div style={{ fontSize: "14px" }}>
-            <b>Escribiste:</b> {this.props.inputNumber}
+            <b>Numero:</b> {this.props.inputNumber}
           </div>
         </div>
         <div>
-          <h2>InputNumbers</h2>
+          <h3>InputNumbers</h3>
           <p>
             El componente InputNumber soporta los estilos filled, outlined y
             default
@@ -56,10 +63,10 @@ export class InputNumberNumberComponent extends Component {
           </div>
         </div>
         <div>
-          <h2>Estilos personalizados</h2>
+          <h3>Estilos personalizados</h3>
           <p>
-            También puedes agregar estilos personalizados a los
-            inputNumber. He aquí un ejemplo.
+            También puedes agregar estilos personalizados a los inputNumber. He
+            aquí un ejemplo.
           </p>
           <div className={globalStyles.elementContainer}>
             <ThemeProvider theme={theme}>

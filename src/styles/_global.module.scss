@@ -26,10 +26,11 @@ h2 {
 h3 {
   font-size: 22px;
   font-weight: 500;
+  margin: 40px 0 12px;
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   margin: 0 0 16px;
 }
 
@@ -95,6 +96,14 @@ p {
 
 .ComponentExample {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ComponentExampleColumn {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   justify-content: center;
 }
 

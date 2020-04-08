@@ -15,4 +15,4 @@ export const INPUT_NUMBER = "INPUT_NUMBER";
 export const GET_SELECTED_OPTIONS = "GET_SELECTED_OPTIONS";
 
 //Autocomplete
-// export const GET_CHARACTERS_NUMBER = "GET_CHARACTERS_NUMBER";
+export const GET_OPTION = "GET_OPTION";

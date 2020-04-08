@@ -23,6 +23,17 @@ const initialState = {
   ],
   selectedOptions: [],
   //Autocomplete
+  optionsAutocomplete: [
+    "perro",
+    "gato",
+    "leon",
+    "culebra",
+    "pez",
+    "tigre",
+    "aguila",
+    "arroz",
+  ],
+  optionSelected: [],
 };
 
 //siderbar
@@ -52,9 +63,14 @@ const inputNumber = (state, action) => {
   return updateObject(state, { inputNumber: action.value });
 };
 
-//Selected
+//Select
 const selectedOptions = (state, action) => {
   return updateObject(state, { selectedOptions: action.options });
+};
+
+//Autocomplete
+const selectedOptionselectedOption = (state, action) => {
+  return updateObject(state, { optionSelected: action.optionSelected });
 };
 
 const reducer = (state = initialState, action) => {
@@ -84,6 +100,10 @@ const reducer = (state = initialState, action) => {
 
     case actionTypes.GET_SELECTED_OPTIONS:
       return selectedOptions(state, action);
+
+    //Autocomplete
+    case actionTypes.GET_OPTION:
+      return selectedOptionselectedOption(state, action);
 
     default:
       return state;

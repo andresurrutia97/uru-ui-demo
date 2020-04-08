@@ -25,7 +25,7 @@ export class InputComponent extends Component {
             "Los campos de texto permiten a los usuarios ingresar y editar texto."
           }
         />
-        <div className={globalStyles.ComponentExample}>
+        <div className={globalStyles.ComponentExampleColumn}>
           <Input
             color={this.props.characterNumber >= 6 ? "success" : "danger"}
             placeholder="Escribe 6 caracteres"
@@ -39,7 +39,7 @@ export class InputComponent extends Component {
             <b># caracteres:</b> {this.props.characterNumber}
           </div>
         </div>
-        <h2>Inputs</h2>
+        <h3>Inputs</h3>
         <p>
           El componente Input soporta los estilos filled, outlined y default
         </p>
@@ -56,7 +56,7 @@ export class InputComponent extends Component {
           <InputCode />
         </div>
 
-        <h2>Estilos personalizados</h2>
+        <h3>Estilos personalizados</h3>
         <p>
           También puedes agregar estilos personalizados a los inputs. He aquí un
           ejemplo.
