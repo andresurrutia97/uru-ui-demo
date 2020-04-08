@@ -1,11 +1,24 @@
-import Home from "./Containers/Home/Home";
+import Home from "./Components/Views/Home/Home";
+import Implementacion from "./Components/Views/Implementacion/Implementacion";
+import Instalacion from "./Components/Views/Instalacion/Instalacion";
+
 import Button from "./Containers/Button/Button";
 import Input from "./Containers/Input/Input";
 import InputNumber from "./Containers/InputNumber/InputNumber";
 import Select from "./Containers/Select/Select";
 import Autocomplete from "./Containers/Autocomplete/Autocomplete";
 
-export const home = { path: "/home", name: "Home", component: Home };
+import Colores from './Components/Views/Colores/Colores'
+
+export const home = [
+  { path: "/home", name: "Introducción", component: Home },
+  { path: "/instalacion", name: "Instalación", component: Instalacion },
+  {
+    path: "/implementacion",
+    name: "Implementación",
+    component: Implementacion,
+  },
+];
 
 export const components = [
   {
@@ -33,4 +46,9 @@ export const components = [
     name: "Autocomplete",
     component: Autocomplete,
   },
+];
+
+
+export const estilos = [
+  { path: "/colores", name: "Colores", component: Colores },
 ];

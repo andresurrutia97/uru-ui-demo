@@ -45,7 +45,8 @@ export class AutocompleteComponent extends Component {
         <div className={globalStyles.ComponentExampleColumn}>
           <Autocomplete
             placeholder="Autocomplete..."
-            variant="filled"
+            variant="outlined"
+            color="success"
             options={this.props.options}
             onChange={this.props.onGetSelectedOption}
           />

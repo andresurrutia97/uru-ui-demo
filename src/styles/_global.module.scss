@@ -3,6 +3,7 @@ $colors: (
   pinkLight: #fff5fa,
   pinkDark: #b61a5d,
   blueMain: #22bdf4,
+  blueDark: #0a7faa,
   blueLight: #effbff,
   blackMain: #363636,
   blackDark: #202020,
@@ -95,16 +96,21 @@ p {
 }
 
 .ComponentExample {
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .ComponentExampleColumn {
+  font-size: 14px;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  p {
+    align-self: flex-start;
+  }
 }
 
 .SelectContainer {

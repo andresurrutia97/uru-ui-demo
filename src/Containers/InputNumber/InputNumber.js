@@ -28,20 +28,19 @@ export class InputNumberNumberComponent extends Component {
           }
         />
         <div className={globalStyles.ComponentExampleColumn}>
-          <p>
-            En el componente InputNumber se puede obtener el número formateado a
-            traves de la propiedad "onChange".
-          </p>
           <InputNumber
-            color={this.props.characterNumber >= 6 ? "success" : "danger"}
             placeholder="Escribe 6 caracteres"
             variant="outlined"
             onChange={this.props.onGetNumber}
             value={this.props.inputNumber}
           />
-          <div style={{ fontSize: "14px" }}>
+          <div style={{ marginBottom: "12px" }}>
             <b>Numero:</b> {this.props.inputNumber}
           </div>
+          <p>
+            En el componente InputNumber se puede obtener el número formateado a
+            traves de la propiedad "onChange".
+          </p>
         </div>
         <div>
           <h3>InputNumbers</h3>
@@ -50,12 +49,12 @@ export class InputNumberNumberComponent extends Component {
             default
           </p>
           <div className={globalStyles.elementContainer}>
+            <InputNumber placeholder="Input Number" variant="filled" />
             <InputNumber
               color="success"
               placeholder="Input Number"
-              variant="filled"
+              variant="outlined"
             />
-            <InputNumber placeholder="Input Number" variant="outlined" />
             <InputNumber color="danger" placeholder="Input Number" />
           </div>
           <div className={globalStyles.code}>
