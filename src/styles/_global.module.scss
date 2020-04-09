@@ -3,7 +3,7 @@ $colors: (
   pinkLight: #fff5fa,
   pinkDark: #b61a5d,
   blueMain: #22bdf4,
-  blueDark: #0a7faa,
+  blueDark: #18a1d3,
   blueLight: #effbff,
   blackMain: #363636,
   blackDark: #202020,
@@ -30,8 +30,14 @@ h3 {
   margin: 40px 0 12px;
 }
 
+h4 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 15px 0 5px;
+}
+
 p {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 0 16px;
 }
 
@@ -120,4 +126,14 @@ p {
 
 .SelecetUl {
   list-style: none;
+}
+
+.Links {
+  text-decoration: none;
+  color: #ed1e79;
+}
+
+.Reforce {
+  font-weight: 500;
+  color: #ed1e79;
 }

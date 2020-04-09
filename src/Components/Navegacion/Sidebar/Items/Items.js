@@ -1,26 +1,15 @@
 import React from "react";
 import Item from "./Item/Item";
 import styles from "./Items.module.scss";
-import { home, components, estilos } from "../../../../Routes";
+import { home, introduccion, components, estilos } from "../../../../Routes";
 import TreeView from "../../../UI/TreeView/TreeView";
 
 const Items = (props) => {
-  const [open, setOpen] = React.useState(false);
-
-  const openHandler = () => {
-    setOpen(!open);
-  };
-
-  let classComponents = [styles.ComponentsList];
-  if (open) {
-    classComponents = [styles.ComponentsList, styles.open];
-  }
-
   const auxMap = (routes) => (
     <ul className={styles.ComponentsList_Items}>
       {routes.map((rt) => {
         return (
-          <Item level key={rt.name} link={rt.path} close={props.close}>
+          <Item level2 key={rt.name} link={rt.path} close={props.close}>
             {rt.name}
           </Item>
         );
@@ -30,7 +19,10 @@ const Items = (props) => {
 
   return (
     <div className={styles.Items}>
-      <TreeView title="Uru-UI">{auxMap(home)}</TreeView>
+      <Item level key={home[0].name} link={home[0].path} close={props.close}>
+        {home[0].name}
+      </Item>
+      <TreeView title="Introduccion">{auxMap(introduccion)}</TreeView>
       <TreeView title="Componentes">{auxMap(components)}</TreeView>
       <TreeView title="Estilos">{auxMap(estilos)}</TreeView>
     </div>

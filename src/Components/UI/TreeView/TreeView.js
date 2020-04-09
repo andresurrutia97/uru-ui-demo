@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./TreeView.module.scss";
 
 const TreeView = (props) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const openHandler = () => {
     setOpen(!open);

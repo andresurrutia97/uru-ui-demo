@@ -5,6 +5,7 @@ import * as actions from "../../store/actionTypes";
 import styles from "./Layout.module.scss";
 import Sidebar from "../../Components/Navegacion/Sidebar/Sidebar";
 import Toolbar from "../../Components/Navegacion/Toolbar/Toolbar";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 
 export class Layout extends Component {
   render() {
@@ -19,10 +20,11 @@ export class Layout extends Component {
         </div>
 
         <Toolbar open={this.props.onOpenSidebar} />
-
-        <div className={styles.Content}>
-          <div className={styles.Main}>{this.props.children}</div>
-        </div>
+        <ScrollToTop>
+          <div className={styles.Content}>
+            <div className={styles.Main}>{this.props.children}</div>
+          </div>
+        </ScrollToTop>
       </div>
     );
   }

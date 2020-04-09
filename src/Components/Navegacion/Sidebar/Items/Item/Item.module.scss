@@ -14,8 +14,20 @@
     width: 100%;
     box-sizing: border-box;
 
+    .level {
+      color: map-get($colors, blackMain);
+      font-weight: 500;
+    }
+
+    .level2 {
+      padding-left: 38px;
+    }
+
     &:hover {
       color: map-get($colors, pinkMain);
+      .level {
+        color: map-get($colors, pinkMain);
+      }
     }
 
     &:active,
@@ -26,16 +38,15 @@
       .hoverFlag {
         background-color: map-get($colors, pinkMain);
       }
+      .level {
+        color: map-get($colors, pinkMain);
+      }
     }
   }
 }
 
 .Item_text {
   padding-left: 22px;
-}
-
-.level {
-  padding-left: 38px;
 }
 
 .hoverFlag {

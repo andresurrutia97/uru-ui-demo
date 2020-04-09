@@ -2,22 +2,21 @@ import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import Layout from "./Hoc/Layout/Layout";
-import { home, components, estilos } from "./Routes";
+import * as routes from "./Routes";
 
 function App() {
+  let rutas = [];
+  for (let i in routes) {
+    rutas.push(...routes[i]);
+  }
+
   return (
     <Layout>
       <Switch>
-        <Route path="/" exact component={() => <Redirect to="/home" />} />
-        {home.map((rt, index) => {
+        {rutas.map((rt, index) => {
           return <Route key={index} path={rt.path} component={rt.component} />;
         })}
-        {components.map((rt, index) => {
-          return <Route key={index} path={rt.path} component={rt.component} />;
-        })}
-        {estilos.map((rt, index) => {
-          return <Route key={index} path={rt.path} component={rt.component} />;
-        })}
+        <Route path="/" component={() => <Redirect to="/home" />} />
       </Switch>
     </Layout>
   );

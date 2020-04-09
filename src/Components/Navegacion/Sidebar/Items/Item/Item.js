@@ -4,8 +4,12 @@ import { NavLink } from "react-router-dom";
 
 const Item = (props) => {
   let classText = [styles.Item_text];
+
   if (props.level) {
     classText = [styles.Item_text, styles.level];
+  }
+  if (props.level2) {
+    classText = [styles.Item_text, styles.level2];
   }
 
   return (
