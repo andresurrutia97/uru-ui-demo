@@ -32,7 +32,7 @@ Instala todas las dependencias utilizadas en el proyecto.
 npm install
 ```
 
-Ejecuta la aplicación el modo desarrollo.<br />
+Ejecuta la aplicación en modo desarrollo.<br />
 Abrir [http://localhost:3000](http://localhost:3000) para ver la aplicación en el navegador.
 ```bash
 npm start
@@ -45,33 +45,33 @@ npm run build
 
 ### Deployment
 
-Para esta aplicación se utilizó el hosting de firebase, por lo que se requiere tener un proyecto en firebase.
+Para esta aplicación se utilizó el hosting de Firebase, por lo que se requiere tener un proyecto en Firebase.
 
-En directorio de proyecto ejecuta los siguientes comandos para hacer deploy en firebase
+En el directorio del proyecto ejecuta los siguientes comandos para hacer deploy.
 
-Instala las herramientas de firebase de manera global.
+Instala las herramientas de Firebase de manera global.
 ```bash
 npm install -g firebase-tools
 ```
 
-Inicia sesión en tu cuenta de firebase
+Inicia sesión en tu cuenta de Firebase.
 ```bash
 firebase login
 ```
 
-Inicializa la aplicación y establece los parámetros requeridos en firebase.
+Inicializa la aplicación y establece los parámetros requeridos por Firebase.
 
 ```bash
 firebase init
 ```
 - Seleccionar solo hosting.
-- Seleccionar el nombre del proyecto en firebase.
-- Especificar el directorio "build" como carpeta a subir a firebase.
+- Seleccionar el nombre del proyecto en Firebase.
+- Especificar el directorio "build" como carpeta a subir a Firebase.
 - "y" a configurar como single-page app.
 - "n" a sobreescribir el archivo build/index.html.
 
 
-Despliega la aplicación en firebase.
+Despliega la aplicación en Firebase.
 ```bash
 firebase deploy
 ```
