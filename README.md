@@ -9,7 +9,7 @@
 <div align="center"> 
   
   Demo app de la librería Uru-UI<br />
-    <h3>[Live Demo](https://uruui-demoapp.web.app/home)</h3>
+    <h3>[Demo](https://uruui-demoapp.web.app/home)</h3>
 </div>
 
 ## Dependencias utilizadas
