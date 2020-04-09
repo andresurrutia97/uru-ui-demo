@@ -6,9 +6,10 @@ const Paleta = (props) => {
     <div className={styles.Paleta}>
       <div className={styles.Title}>{props.name}</div>
       <div>
-        {props.colors.map((cl) => {
+        {props.colors.map((cl, i) => {
           return (
             <div
+              key={i}
               className={styles.PaletaItem}
               style={{ backgroundColor: cl.color }}
             >

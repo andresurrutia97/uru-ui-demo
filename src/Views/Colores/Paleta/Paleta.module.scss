@@ -29,11 +29,14 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.274);
 }
 .PillsCode {
-  display: none;
   font-weight: 400;
 }
 
 @media (min-width: 700px) {
+  .PillsCode {
+    display: none;
+  }
+
   .PaletaItem {
     width: 95%;
     height: 40px;

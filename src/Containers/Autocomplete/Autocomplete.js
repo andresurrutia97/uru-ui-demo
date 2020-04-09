@@ -98,7 +98,7 @@ export class AutocompleteComponent extends Component {
 
         <p>
           Estos son los nombres de las clases de estilo que se tienen que
-          modificar el componente Select con estilos personalizados.
+          modificar el componente Select para los estilos personalizados.
         </p>
         <div style={{ marginLeft: "50px", marginBottom: "20px" }}>
           <ul>
@@ -112,7 +112,7 @@ export class AutocompleteComponent extends Component {
 
         <div className={globalStyles.elementContainer}>
           <div>
-            <img style={{ width: "100%" }} src={classesImg}></img>
+            <img style={{ width: "100%" }} src={classesImg} alt={"class names autocomplete"}></img>
           </div>
         </div>
       </Fragment>

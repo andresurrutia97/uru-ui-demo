@@ -1,8 +1,6 @@
 import React from "react";
 import Title from "../../Components/UI/Title/Title";
 import Paleta from "./Paleta/Paleta";
-import globalStyles from "../../styles/_global.module.scss";
-import styles from "./Colores.module.scss";
 
 const Colores = () => {
   const primary = [
