@@ -38,7 +38,7 @@ Abrir [http://localhost:3000](http://localhost:3000) para ver la aplicación en 
 npm start
 ```
 
-Crea la aplicación lista para producción en la carpeda "build".
+Crea la aplicación lista para producción en la carpeta "build".
 ```bash
 npm run build
 ```
@@ -59,10 +59,17 @@ Inicia sesión en tu cuenta de firebase
 firebase login
 ```
 
-Inicializa la aplicación y establece los parametros de firebase.
+Inicializa la aplicación y establece los parámetros requeridos en firebase.
+
 ```bash
 firebase init
 ```
+- Seleccionar solo hosting.
+- Seleccionar el nombre del proyecto en firebase.
+- Especificar el directorio "build" como carpeta a subir a firebase.
+- "y" a configurar como single-page app.
+- "n" a sobreescribir el archivo build/index.html.
+
 
 Despliega la aplicación en firebase.
 ```bash
