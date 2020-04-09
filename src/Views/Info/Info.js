@@ -16,18 +16,9 @@ const Info = () => {
         >
           emotion
         </a>{" "}
-        con el fin ecribir css dentro de JavaScript.
+        con el fin escribir css dentro de JavaScript.
       </p>
 
-      <h3>Creado por:</h3>
-      <p>
-        Hola, mi nombre es{" "}
-        <span className={globalStyles.Reforce}>Andres Felipe Urrutia Solarte</span> de
-        Cali, Colombia. Soy un desarrollador web graduado de Ingeniería
-        Multimedia de la Universidad Autónoma de Occidente.
-        <br />
-        <br />
-      </p>
       <div
         style={{
           border: "solid 1px #ccc",
@@ -39,8 +30,11 @@ const Info = () => {
         <h4>Nota:</h4>
         <p>
           Les textos descriptivos de los componentes de esta Demo-app han sido
-          extraidos de la página de{" "}
-          <a className={globalStyles.Links} href={"https://material-ui.com/es/"}>
+          extraídos de la página de{" "}
+          <a
+            className={globalStyles.Links}
+            href={"https://material-ui.com/es/"}
+          >
             Material-Ui
           </a>
           .
@@ -48,8 +42,20 @@ const Info = () => {
       </div>
       <p>
         Esta librería y demo-app fueron creadas como respuesta al
-        coding-challenge de <span className={globalStyles.Reforce}>Moove It</span>.
+        coding-challenge de{" "}
+        <span className={globalStyles.Reforce}>Moove It</span>.
       </p>
+      <h3>Creado por:</h3>
+      <span>
+        Hola, mi nombre es{" "}
+        <span className={globalStyles.Reforce}>
+          Andres Felipe Urrutia Solarte
+        </span>{" "}
+        de Cali, Colombia. Soy un desarrollador web graduado de Ingeniería
+        Multimedia de la Universidad Autónoma de Occidente.
+        <br />
+        <br />
+      </span>
     </React.Fragment>
   );
 };
