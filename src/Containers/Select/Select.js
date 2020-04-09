@@ -10,6 +10,7 @@ import {
   MultiSelection,
   CustomTheme,
 } from "../../Components/Code/SelectCode";
+import classesImg from "../../Assets/img/classNamesSelect.png";
 
 export class SelectComponent extends Component {
   theme = {
@@ -61,46 +62,66 @@ export class SelectComponent extends Component {
           </div>
         </div>
 
-        <div>
-          <h3>Select - Selección única</h3>
-          <p>
-            En el componente Select se puede obtener las opciones seleccionadas
-            a traves de la propiedad "onChange". Al pasarla se retornará un
-            arreglo con la/s opciones seleccionadas
-          </p>
-          <div className={globalStyles.elementContainer}>
-            <Select options={this.props.options} />
-          </div>
-          <div className={globalStyles.code}>
-            <SingleSelection />
-          </div>
+        <h3>Select - Selección única</h3>
+        <p>
+          En el componente Select se puede obtener las opciones seleccionadas a
+          traves de la propiedad "onChange". Al pasarla se retornará un arreglo
+          con la/s opciones seleccionadas
+        </p>
+        <div className={globalStyles.elementContainer}>
+          <Select options={this.props.options} />
         </div>
-        <div>
-          <h3>Select - Selección multiple</h3>
-          <p>
-            El componente select soporta seleccion multiple. Se activa con la
-            propiedad "multi".
-          </p>
-          <div className={globalStyles.elementContainer}>
-            <Select options={this.props.options} multi />
-          </div>
-          <div className={globalStyles.code}>
-            <MultiSelection />
-          </div>
+        <div className={globalStyles.code}>
+          <SingleSelection />
         </div>
-        <div>
-          <h3>Estilos personalizados</h3>
-          <p>
-            También puedes agregar estilos personalizados a los
-            inputNumInputNumbers. He aquí un ejemplo.
-          </p>
-          <div className={globalStyles.elementContainer}>
-            <ThemeProvider theme={this.theme}>
-              <Select multi options={this.props.options} />
-            </ThemeProvider>
-          </div>
-          <div className={globalStyles.code}>
-            <CustomTheme />
+
+        <h3>Select - Selección multiple</h3>
+        <p>
+          El componente select soporta seleccion multiple. Se activa con la
+          propiedad "multi".
+        </p>
+        <div className={globalStyles.elementContainer}>
+          <Select options={this.props.options} multi />
+        </div>
+        <div className={globalStyles.code}>
+          <MultiSelection />
+        </div>
+
+        <h3>Estilos personalizados</h3>
+        <p>
+          También puedes agregar estilos personalizados a los
+          inputNumInputNumbers. He aquí un ejemplo.
+        </p>
+        <div className={globalStyles.elementContainer}>
+          <ThemeProvider theme={this.theme}>
+            <Select multi options={this.props.options} />
+          </ThemeProvider>
+        </div>
+        <div className={globalStyles.code}>
+          <CustomTheme />
+        </div>
+
+        <p>
+          Estos son los nombres de las clases de estilo que se tienen que
+          modificar el componente Select con estilos personalizados.
+        </p>
+        <div style={{ marginLeft: "50px", marginBottom: "20px" }}>
+          <ul>
+            <li>root</li>
+            <li>optionsList</li>
+            <li>optionItem</li>
+            <li>selectedOptionItem</li>
+            <li>selectedOptions</li>
+            <li>icon</li>
+            <li>selectedOptionsPillsList</li>
+            <li>selectedOptionsPills</li>
+            <li>placeholder</li>
+          </ul>
+        </div>
+
+        <div className={globalStyles.elementContainer}>
+          <div>
+            <img style={{ width: "100%" }} src={classesImg}></img>
           </div>
         </div>
       </Fragment>

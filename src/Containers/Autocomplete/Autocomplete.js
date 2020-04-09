@@ -9,6 +9,7 @@ import {
   AutocompleteCode,
   CustomTheme,
 } from "../../Components/Code/AutocompleteCode";
+import classesImg from "../../Assets/img/classNamesAutocomplete.png";
 
 export class AutocompleteComponent extends Component {
   options = [
@@ -55,40 +56,63 @@ export class AutocompleteComponent extends Component {
             <b>Seleccionaste:</b> {this.props.selectedOption[0]}
           </div>
         </div>
-        <div>
-          <h3>Combo box</h3>
-          <p>
-            El valor debe elegirse de un conjunto predefinido de valores
-            permitidos.
-          </p>
-          <div className={globalStyles.elementContainer}>
+
+        <h3>Combo box</h3>
+        <p>
+          En el componente Autocomplete se puede obtener las opcione
+          seleccionada a traves de la propiedad "onChange". Al pasarla se
+          retornará un arreglo con la opcion seleccionada.
+        </p>
+        <p>
+          El valor debe elegirse de un conjunto predefinido de valores
+          permitidos.
+        </p>
+        <div className={globalStyles.elementContainer}>
+          <Autocomplete
+            placeholder="Autocomplete..."
+            variant="filled"
+            options={this.props.options}
+          />
+        </div>
+        <div className={globalStyles.code}>
+          <AutocompleteCode />
+        </div>
+
+        <h3>Estilos personalizados</h3>
+        <p>
+          También puedes agregar estilos personalizados a los
+          inputNumInputNumbers. He aquí un ejemplo.
+        </p>
+        <div className={globalStyles.elementContainer}>
+          <ThemeProvider theme={theme}>
             <Autocomplete
-              placeholder="Autocomplete..."
-              variant="filled"
+              variant="outlined"
+              placeholder="Custom Autocomplete"
               options={this.props.options}
             />
-          </div>
-          <div className={globalStyles.code}>
-            <AutocompleteCode />
-          </div>
+          </ThemeProvider>
         </div>
-        <div>
-          <h3>Estilos personalizados</h3>
-          <p>
-            También puedes agregar estilos personalizados a los
-            inputNumInputNumbers. He aquí un ejemplo.
-          </p>
-          <div className={globalStyles.elementContainer}>
-            <ThemeProvider theme={theme}>
-              <Autocomplete
-                variant="outlined"
-                placeholder="Custom Autocomplete"
-                options={this.props.options}
-              />
-            </ThemeProvider>
-          </div>
-          <div className={globalStyles.code}>
-            <CustomTheme />
+        <div className={globalStyles.code}>
+          <CustomTheme />
+        </div>
+
+        <p>
+          Estos son los nombres de las clases de estilo que se tienen que
+          modificar el componente Select con estilos personalizados.
+        </p>
+        <div style={{ marginLeft: "50px", marginBottom: "20px" }}>
+          <ul>
+            <li>root</li>
+            <li>input</li>
+            <li>optionsList</li>
+            <li>optionItem</li>
+            <li>noOptions</li>
+          </ul>
+        </div>
+
+        <div className={globalStyles.elementContainer}>
+          <div>
+            <img style={{ width: "100%" }} src={classesImg}></img>
           </div>
         </div>
       </Fragment>

@@ -94,10 +94,7 @@ const reducer = (state = initialState, action) => {
     case actionTypes.INPUT_NUMBER:
       return inputNumber(state, action);
 
-    //Selected
-    case actionTypes.INPUT_NUMBER:
-      return inputNumber(state, action);
-
+    //Select
     case actionTypes.GET_SELECTED_OPTIONS:
       return selectedOptions(state, action);
 
