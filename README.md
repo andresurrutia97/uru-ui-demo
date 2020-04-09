@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="">
+    <img width="300" src="./src/Assets/img/logoWeb.png">
+  </a>
+</p>
 
-## Available Scripts
+<h1 align="center">Uru-UI Demo-app</h1>
 
-In the project directory, you can run:
+<div align="center"> 
+  
+  Demo app de la librería Uru-UI
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Dependencias utilizadas
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Este proyecto se creó con [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm test`
+#### `React Router`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### `Redux`
 
-### `npm run build`
+#### `Sass`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### `Uru-Ui`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Scripts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
+Instala todas las dependencias utilizadas en el proyecto.
 
-### `npm run eject`
+```bash
+npm start
+```
+Ejecuta la aplicación el modo desarrollo<br />
+Abrir [http://localhost:3000](http://localhost:3000) para ver la aplicación en el navegador.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```bash
+npm run build
+```
+Crea la aplicación para producción en la carpeda "build".
 
 ### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Para esta aplicación se utilizó el hosting de firebase, por lo que se requiere tener un proyecto en firebase.
 
-### `npm run build` fails to minify
+En directorio de proyecto ejecuta los siguientes comandos para hacer deploy en firebase
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```bash
+npm install -g firebase-tools
+```
+Instala las herramientas de firebase de manera global.
+
+```bash
+firebase login
+```
+Inicia sesión en tu cuenta de firebase
+
+```bash
+firebase init
+```
+Inicializa la aplicación y establece los parametros de firebase.
+
+```bash
+firebase deploy
+```
+Despliega la aplicación en firebase.
