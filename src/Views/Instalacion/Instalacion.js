@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../../Components/UI/Title/Title";
-import styles from "../../styles/_global.module.scss";
+import globalStyles from "../../styles/_global.module.scss";
 
 const Instalacion = () => {
   return (
@@ -9,7 +9,7 @@ const Instalacion = () => {
       <h4>
         Uru-UI está disponible como un{" "}
         <a
-          className={styles.Links}
+          className={globalStyles.Links}
           href={"https://www.npmjs.com/package/uru-ui"}
         >
           paquete npm
@@ -17,10 +17,10 @@ const Instalacion = () => {
         .
       </h4>
       <h3>Npm</h3>
-      <div className={styles.code}>
-        <pre className={styles.jsx}>
+      <div className={globalStyles.code}>
+        <pre className={globalStyles.jsx}>
           <code>
-            <span className={styles.tag}>
+            <span className={globalStyles.tag}>
               <span>npm install --save uru-ui</span>
             </span>
           </code>

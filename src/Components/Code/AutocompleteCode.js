@@ -93,7 +93,7 @@ export const CustomTheme = () => {
             <span className={globalStyles.punctuation}>{"     <"}</span>
             <span className={globalStyles.componentName}>Autocomplete</span>
             <span className={globalStyles.attr_name}> placeholder</span>=
-            <span className={globalStyles.attr_value}>'Autocomplete...'</span>
+            <span className={globalStyles.attr_value}>'Custom Autocomplete'</span>
             <span className={globalStyles.attr_name}> variant</span>=
             <span className={globalStyles.attr_value}>'outlined'</span>
             <span className={globalStyles.attr_name}> options</span>=

@@ -101,7 +101,7 @@ export const CustomTheme = () => {
             <span className={globalStyles.attr_name}> variant</span>=
             <span className={globalStyles.attr_value}>'outlined'</span>
             <span className={globalStyles.attr_name}> placeholder</span>=
-            <span className={globalStyles.attr_value}>'Custom Input'</span>
+            <span className={globalStyles.attr_value}>'Custom InputNumber'</span>
             <span className={globalStyles.punctuation}>{"/>"}</span>
             {"\n"}
             <span className={globalStyles.punctuation}>{"   <"}</span>

@@ -29,13 +29,13 @@ export class InputNumberNumberComponent extends Component {
         />
         <div className={globalStyles.ComponentExampleColumn}>
           <InputNumber
-            placeholder="Escribe 6 caracteres"
+            placeholder="Número"
             variant="outlined"
             onChange={this.props.onGetNumber}
             value={this.props.inputNumber}
           />
           <div style={{ marginBottom: "12px" }}>
-            <b>Numero:</b> {this.props.inputNumber}
+            <b>Número:</b> {this.props.inputNumber}
           </div>
           <p>
             En el componente InputNumber se puede obtener el número formateado a
@@ -71,7 +71,7 @@ export class InputNumberNumberComponent extends Component {
             <ThemeProvider theme={theme}>
               <InputNumber
                 variant="outlined"
-                placeholder="custom InputNumber"
+                placeholder="Custom InputNumber"
               />
             </ThemeProvider>
           </div>
