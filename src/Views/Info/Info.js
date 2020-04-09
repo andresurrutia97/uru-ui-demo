@@ -9,14 +9,17 @@ const Info = () => {
 
       <h3>Estilos</h3>
       <p>
-        Para los estilos custom de está librería se utiliza{" "}
+        Para los estilos custom de esta librería se utiliza{" "}
         <a
           className={globalStyles.Links}
           href={"https://emotion.sh/docs/introduction"}
         >
           emotion
         </a>{" "}
-        con el fin escribir css dentro de JavaScript.
+        con el fin de escribir CSS dentro de JavaScript. No es necesario
+        instalar emotion, pero si vas a utilizar estilos personalizados, puedes
+        revisar la documentacion que tienen para ver la estructura de los
+        estilos.
       </p>
 
       <div

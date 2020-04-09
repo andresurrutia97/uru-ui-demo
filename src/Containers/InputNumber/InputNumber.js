@@ -46,7 +46,7 @@ export class InputNumberNumberComponent extends Component {
           <h3>InputNumbers</h3>
           <p>
             El componente InputNumber soporta los estilos filled, outlined y
-            default
+            default.
           </p>
           <div className={globalStyles.elementContainer}>
             <InputNumber placeholder="Input Number" variant="filled" />

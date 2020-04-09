@@ -66,7 +66,7 @@ export class SelectComponent extends Component {
         <p>
           En el componente Select se puede obtener las opciones seleccionadas a
           traves de la propiedad "onChange". Al pasarla se retornará un arreglo
-          con la/s opciones seleccionadas
+          con la/s opciones seleccionadas.
         </p>
         <div className={globalStyles.elementContainer}>
           <Select options={this.props.options} />
@@ -89,8 +89,8 @@ export class SelectComponent extends Component {
 
         <h3>Estilos personalizados</h3>
         <p>
-          También puedes agregar estilos personalizados a los
-          inputNumInputNumbers. He aquí un ejemplo.
+          También puedes agregar estilos personalizados al Select. He aquí un
+          ejemplo.
         </p>
         <div className={globalStyles.elementContainer}>
           <ThemeProvider theme={this.theme}>
@@ -103,7 +103,7 @@ export class SelectComponent extends Component {
 
         <p>
           Estos son los nombres de las clases de estilo que se tienen que
-          modificar el componente Select para los estilos personalizados.
+          modificar en el componente Select para los estilos personalizados.
         </p>
         <div style={{ marginLeft: "50px", marginBottom: "20px" }}>
           <ul>
@@ -121,7 +121,11 @@ export class SelectComponent extends Component {
 
         <div className={globalStyles.elementContainer}>
           <div>
-            <img style={{ width: "100%" }} src={classesImg} alt={"class names select"}></img>
+            <img
+              style={{ width: "100%" }}
+              src={classesImg}
+              alt={"class names select"}
+            ></img>
           </div>
         </div>
       </Fragment>

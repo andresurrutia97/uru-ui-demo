@@ -59,9 +59,9 @@ export class AutocompleteComponent extends Component {
 
         <h3>Combo box</h3>
         <p>
-          En el componente Autocomplete se puede obtener las opcione
-          seleccionada a traves de la propiedad "onChange". Al pasarla se
-          retornará un arreglo con la opcion seleccionada.
+          En el componente Autocomplete se puede obtener la opción
+          seleccionada a través de la propiedad "onChange". Al pasarla se
+          retornará un arreglo con esta opción.
         </p>
         <p>
           El valor debe elegirse de un conjunto predefinido de valores
@@ -80,8 +80,8 @@ export class AutocompleteComponent extends Component {
 
         <h3>Estilos personalizados</h3>
         <p>
-          También puedes agregar estilos personalizados a los
-          inputNumInputNumbers. He aquí un ejemplo.
+          También puedes agregar estilos personalizados al Autocomplete. He aquí
+          un ejemplo.
         </p>
         <div className={globalStyles.elementContainer}>
           <ThemeProvider theme={theme}>
@@ -98,7 +98,7 @@ export class AutocompleteComponent extends Component {
 
         <p>
           Estos son los nombres de las clases de estilo que se tienen que
-          modificar el componente Select para los estilos personalizados.
+          modificar en el componente Select para los estilos personalizados.
         </p>
         <div style={{ marginLeft: "50px", marginBottom: "20px" }}>
           <ul>
@@ -112,7 +112,11 @@ export class AutocompleteComponent extends Component {
 
         <div className={globalStyles.elementContainer}>
           <div>
-            <img style={{ width: "100%" }} src={classesImg} alt={"class names autocomplete"}></img>
+            <img
+              style={{ width: "100%" }}
+              src={classesImg}
+              alt={"class names autocomplete"}
+            ></img>
           </div>
         </div>
       </Fragment>

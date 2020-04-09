@@ -41,7 +41,7 @@ export class InputComponent extends Component {
         </div>
         <h3>Inputs</h3>
         <p>
-          El componente Input soporta los estilos filled, outlined y default
+          El componente Input soporta los estilos filled, outlined y default.
         </p>
         <div className={globalStyles.elementContainer}>
           <Input
