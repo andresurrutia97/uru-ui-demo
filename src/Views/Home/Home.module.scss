@@ -1,0 +1,39 @@
+@import "../../styles/global.module";
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("../../Assets/Neon.ttf");
+}
+.Logo {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 250px;
+  }
+
+  Span {
+    font-family: CustomFont;
+    font-size: 90px;
+  }
+
+  .Uru {
+    color: map-get($colors, pinkMain);
+  }
+
+  .UI {
+    color: map-get($colors, blueMain);
+  }
+  .Ver {
+    padding-left: 8px;
+    color: map-get($colors, pinkMain);
+    font-size: 18px;
+  }
+
+  p {
+    margin: 25px 0 40px;
+    font-size: 20px;
+  }
+}
