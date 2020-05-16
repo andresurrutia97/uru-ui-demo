@@ -43,11 +43,6 @@ const Info = () => {
           .
         </p>
       </div>
-      <p>
-        Esta librería y demo-app fueron creadas como respuesta al
-        coding-challenge de{" "}
-        <span className={globalStyles.Reforce}>Moove It</span>.
-      </p>
       <h3>Creado por:</h3>
       <span>
         Hola, mi nombre es{" "}
